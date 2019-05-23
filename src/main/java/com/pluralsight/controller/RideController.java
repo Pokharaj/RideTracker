@@ -22,4 +22,11 @@ public class RideController {
 		return rideService.getRides();
 	}
 	
+	@RequestMapping(value = "/ride", method = RequestMethod.PUT)
+	public @ResponseBody Ride createRide() {
+		Ride ride = new Ride();
+		ride.setName("Test Ride");
+		ride.setDuration(35);
+		return rideService.createRide(ride);
+	}
 }
