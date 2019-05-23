@@ -10,4 +10,11 @@ public interface RideRepository {
 	
 	List<Ride> getRides();
 
+	Ride getRide(int id);
+
+	Ride updateRide(Ride ride);
+
+	void batchUpdate(List<Object[]> pairs);
+
+	void delete(Integer id);
 }
